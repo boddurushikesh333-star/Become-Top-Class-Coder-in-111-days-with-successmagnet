@@ -1,19 +1,17 @@
 class Solution {
     public void reverseArray(int a[]) {
         // code here
-        int b[] = new int[a.length];
-        int i=a.length-1, j=0;
+       
+        int  i=0, j=a.length-1;
         
-        while(j<b.length) {
-            b[j] = a[i];
+        while(i<=j) {
+            //swapping
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
             
-            j++;
-            i--;
-        }
-        //update the array elements
-        
-        for(i = 0; i<b.length; i++) {
-            a[i] = b[i];
+            i++;
+            j--;
         }
     }
 }
